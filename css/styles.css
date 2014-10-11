@@ -1,0 +1,50 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: #333;
+}
+
+h1 {
+  font-size: 0.8em;
+  color: orange;
+}
+
+h2 {}
+
+ul {}
+
+li {}
+
+#todos {
+  box-sizing: border-box;
+  width: 50%;
+  height: 70%;
+  margin: calc(30% / 2) auto 0;
+  background-color: #FFF;
+  border-bottom: 3px solid #CCC;
+  border-radius: 4px;
+}
+
+#today {
+  box-sizing: border-box;
+  float: left;
+  width: 50%;
+  height: 100%;
+  padding: 20px;
+  border-radius: 4px 0 0 4px;
+}
+
+#tomorrow {
+  box-sizing: border-box;
+  width: 50%;
+  height: 100%;
+  margin-left: 50%;
+  padding: 20px;
+  background-color: #CCC;
+  border-radius: 0 4px 4px 0;
+}
+
+.zero {}
