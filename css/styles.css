@@ -8,8 +8,12 @@ body {
 }
 
 h1 {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  color: #777;
+  font-family: monospace, arial;
   font-size: 0.8em;
-  color: orange;
 }
 
 h2 {}
@@ -18,33 +22,75 @@ ul {}
 
 li {}
 
+#main-menu {
+  margin-top: 10px;
+}
+
+.tab-menu {
+  line-height: 30px;
+  height: 30px;
+  text-align: center;
+}
+
+.tab-link {
+  display: inline-block;
+  color: #CCC;
+  background-color: #444;
+  padding: 0 1em;
+  border-radius: 3px;
+}
+
+.tab-link:hover {
+  background-color: orangered;
+}
+
+.tab-link:active {
+  box-shadow: inset 0 2px 6px #000;
+}
+
+.tab-link.active {
+  color: #FFF;
+  background-color: orangered;
+}
+
+.todos-left {
+  margin-left: 1em;
+  font-weight: bold;
+}
+
 #todos {
-  box-sizing: border-box;
-  width: 50%;
-  height: 70%;
-  margin: calc(30% / 2) auto 0;
-  background-color: #FFF;
-  border-bottom: 3px solid #CCC;
-  border-radius: 4px;
+  width: 70%;
+  margin: 50px auto;
 }
 
-#today {
-  box-sizing: border-box;
-  float: left;
-  width: 50%;
-  height: 100%;
-  padding: 20px;
-  border-radius: 4px 0 0 4px;
+#now,
+#next {
+  color: #CCC;
 }
 
-#tomorrow {
-  box-sizing: border-box;
-  width: 50%;
-  height: 100%;
-  margin-left: 50%;
-  padding: 20px;
-  background-color: #CCC;
-  border-radius: 0 4px 4px 0;
+#todos ul {
+  padding: 1px 0;
+}
+
+.todo {
+  line-height: 40px;
+  background-color: #393939;
+  margin: 5px 0;
+  padding: 0 1em;
+  border-radius: 2px;
+}
+
+.todo:hover {
+  background-color: #444;
+}
+
+.todo:active {
+  background-color: #454545;
+  width: 94%;
+  height: 36px;
+  line-height: 36px;
+  margin: 7px auto;
+  font-size: 0.9em;
 }
 
 .zero {}

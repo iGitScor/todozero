@@ -10,28 +10,31 @@
 
 <body>
   <h1>ToDo zero</h1>
-    
+
     <ul id="main-menu" class="tab-menu">
-        <li data-tab="today">Today</li>
-        <li data-tab="tomorrow">Tomorrow</li>
+        <li class="tab-link active" data-tab="now">Aujourd'hui<span class="todos-left">0</span></li>
+        <li class="tab-link" data-tab="next">Plus tard<span class="todos-left">0</span></li>
     </ul>
 
     <div id="todos">
-        <div id="today">
-            <h2>Aujourd'hui</h2>
+        <div id="now" class="tab">
             <ul>
-                <li class="zero">0</li>
+                <li class="todo zero">Bosser sur ToDoZero</li>
+                <li class="todo zero">Bosser</li>
+                <li class="todo zero">Dormir</li>
             </ul>
         </div>
 
-        <div id="tomorrow">
-            <h2>Demain</h2>
+        <div id="next" class="tab">
             <ul>
-                <li class="zero">0</li>
+                <li class="todo zero">Bosser</li>
+                <li class="todo zero">Dormir</li>
+                <li class="todo zero">Faire une pause</li>
             </ul>
         </div>
     </div>
 
+    <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
