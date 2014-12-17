@@ -21,7 +21,7 @@ function openTab(tabName) {
     closeAllOtherTabs(tabName);
 
     tab.show();
-};
+}
 
 /**
  * [closeAllOtherTabs description]
@@ -40,7 +40,7 @@ function closeAllOtherTabs(tabName) {
             $(this).hide();
         }
     });
-};
+}
 
 /**
  * [initTabLink description]
@@ -52,10 +52,10 @@ function initTabLink(tabLink) {
         event.preventDefault();
 
         $('.tab-link').each(function() {
-            $(this).removeClass('active');
+            $(this).removeClass('tab-active');
         });
 
-        tabLink.addClass('active');
+        tabLink.addClass('tab-active');
 
         openTab(tabLink.attr('data-tab'));
     });
