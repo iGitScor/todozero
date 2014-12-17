@@ -74,11 +74,6 @@ li {}
 	border-bottom: 4px solid orangered;
 }
 
-.todos-left {
-	margin-left: 1em;
-	font-weight: bold;
-}
-
 /* ==================================================================== TODOS */
 
 #todos {
@@ -93,6 +88,14 @@ li {}
 
 #todos ul {
 	padding: 1px 0;
+}
+
+#todos-left {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #FF4500;
+  font-size: 8em;
 }
 
 .zero {}

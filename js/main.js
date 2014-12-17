@@ -4,7 +4,24 @@ $(document).ready(function() {
     });
 
     closeAllOtherTabs('now');
+
+    refreshTodosLeft();
+
+    $('.tab-link').click(function() {
+      var tab = $(this).data('tabname');
+
+      openTab(tab);
+    });
 });
+
+/**
+ * Returns the name of the active tab
+ *
+ * @return {string|undefined}
+ */
+function getActiveTab() {
+  return $('.tab-active').data('tabname');
+}
 
 /**
  * [openTab description]
@@ -21,6 +38,8 @@ function openTab(tabName) {
     closeAllOtherTabs(tabName);
 
     tab.show();
+
+    refreshTodosLeft();
 }
 
 /**
@@ -60,3 +79,22 @@ function initTabLink(tabLink) {
         openTab(tabLink.attr('data-tab'));
     });
 }
+
+/**
+ * Refresh the "todos left" count
+ *
+ * @return {undefined}
+ */
+function refreshTodosLeft() {
+  var activeTab = getActiveTab();
+  var todosLeft;
+
+  if (typeof activeTab === 'undefined') {
+    return false;
+  }
+
+  todosLeft = $('#' + activeTab + ' .todo').length;
+
+  $('#todos-left').html(todosLeft);
+}
+
