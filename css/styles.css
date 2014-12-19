@@ -2,11 +2,13 @@
 
 html {
 	height: 100%;
+	background: #E4E4E4 url('../img/default background.jpg') no-repeat center center fixed;
+	background-size: cover;
 }
 
 body {
+  position: relative;
 	height: 100%;
-	background-color: #333;
 }
 
 a {
@@ -22,7 +24,16 @@ h1 {
 	font-size: 0.8em;
 }
 
-h2 {}
+h2 {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  color: #FFFFFF;
+  font-family: monospace, arial;
+  font-size: 4.5em;
+  font-weight: bold;
+  text-shadow: 0 1px 0px #EEE, 0 2px 0px #DDD, 0 3px 0px #CCC, 0 4px 0px #BBB, 0 5px 0px #AAA;
+}
 
 ul {}
 
@@ -77,8 +88,10 @@ li {}
 /* ==================================================================== TODOS */
 
 #todos {
-	width: 70%;
-	margin: 50px auto;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+	width: 400px;
 }
 
 #now,
@@ -88,14 +101,6 @@ li {}
 
 #todos ul {
 	padding: 1px 0;
-}
-
-#todos-left {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  color: #FF4500;
-  font-size: 8em;
 }
 
 .zero {}

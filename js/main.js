@@ -1,17 +1,7 @@
 $(document).ready(function() {
-    $('.tab-link').each(function() {
-        initTabLink($(this));
-    });
+    initTabLinks();
 
     closeAllOtherTabs('now');
-
-    refreshTodosLeft();
-
-    $('.tab-link').click(function() {
-      var tab = $(this).data('tabname');
-
-      openTab(tab);
-    });
 });
 
 /**
@@ -20,7 +10,7 @@ $(document).ready(function() {
  * @return {string|undefined}
  */
 function getActiveTab() {
-  return $('.tab-active').data('tabname');
+    return $('.tab-active').data('tabname');
 }
 
 /**
@@ -38,8 +28,6 @@ function openTab(tabName) {
     closeAllOtherTabs(tabName);
 
     tab.show();
-
-    refreshTodosLeft();
 }
 
 /**
@@ -59,6 +47,8 @@ function closeAllOtherTabs(tabName) {
             $(this).hide();
         }
     });
+
+//    refreshTodosLeft();
 }
 
 /**
@@ -76,7 +66,13 @@ function initTabLink(tabLink) {
 
         tabLink.addClass('tab-active');
 
-        openTab(tabLink.attr('data-tab'));
+        openTab(tabLink.data('tabname'));
+    });
+}
+
+function initTabLinks() {
+    $('.tab-link').each(function() {
+        initTabLink($(this));
     });
 }
 
@@ -86,15 +82,15 @@ function initTabLink(tabLink) {
  * @return {undefined}
  */
 function refreshTodosLeft() {
-  var activeTab = getActiveTab();
-  var todosLeft;
+    var activeTab = getActiveTab();
+    var todosLeft;
 
-  if (typeof activeTab === 'undefined') {
-    return false;
-  }
+    if (typeof activeTab === 'undefined') {
+        return false;
+    }
 
-  todosLeft = $('#' + activeTab + ' .todo').length;
+    todosLeft = $('#' + activeTab + ' .todo').length;
 
-  $('#todos-left').html(todosLeft);
+    $('#todos-left').html(todosLeft);
 }
 
