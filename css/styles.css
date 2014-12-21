@@ -1,106 +1,176 @@
 /* =========================================================== GENERAL STYLES */
 
 html {
-	height: 100%;
-	background: #E4E4E4 url('../img/default background.jpg') no-repeat center center fixed;
-	background-size: cover;
+  	height: 100%;
+  	background: #E4E4E4 url('../img/default background.jpg') no-repeat center center fixed;
+  	background-size: cover;
 }
 
 body {
-  position: relative;
-	height: 100%;
+    position: relative;
+  	height: 100%;
+}
+
+div, input {
+    box-sizing: border-box;
 }
 
 a {
-	text-decoration: none;
+  	text-decoration: none;
 }
 
 h1 {
-	position: absolute;
-	top: 5px;
-	left: 5px;
-	color: #777;
-	font-family: monospace, arial;
-	font-size: 0.8em;
+  	position: absolute;
+  	top: 5px;
+  	left: 5px;
+  	color: #777;
+  	font-family: monospace, arial;
+  	font-size: 0.8em;
 }
 
 h2 {
-  position: absolute;
-  top: 30px;
-  left: 30px;
-  color: #FFFFFF;
-  font-family: monospace, arial;
-  font-size: 4.5em;
-  font-weight: bold;
-  text-shadow: 0 1px 0px #EEE, 0 2px 0px #DDD, 0 3px 0px #CCC, 0 4px 0px #BBB, 0 5px 0px #AAA;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: #FFFFFF;
+    font-family: monospace, arial;
+    font-size: 4.5em;
+    font-weight: bold;
 }
 
 ul {}
 
 li {}
 
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s linear;
+}
+
+.visible {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1s linear, visibility 1s linear;
+}
+
 /* ================================================================== BUTTONS */
 
 .btn {
-	margin: 5px 0;
-	padding: 0 1em;
-	line-height: 40px;
-	color: #CCC;
-	background-color: #393939;
-	border-radius: 2px;
-	box-sizing: border-box;
+  	margin: 5px 0;
+  	padding: 0 1em;
+  	line-height: 40px;
+  	color: #CCC;
+  	background-color: #393939;
+  	border-radius: 2px;
+  	box-sizing: border-box;
 }
 
 .btn:hover {
-	background-color: #444;
+  	background-color: #444;
 }
 
 .btn:active {
-	background-color: #555;
+  	background-color: #555;
 }
 
 /* ================================================================ MAIN MENU */
 
 #main-menu {
-	margin-top: 10px;
+  	margin-top: 10px;
 }
 
 #main-menu li {
-	display: inline-block;
+  	display: inline-block;
 }
 
 /* ===================================================================== TABS */
 
 .tab-menu {
-	line-height: 30px;
-	height: 30px;
-	text-align: center;
+  	line-height: 30px;
+  	height: 30px;
+  	text-align: center;
 }
 
 .tab-link {
-	display: inline-block;
+  	display: inline-block;
 }
 
 .tab-active {
-	border-bottom: 4px solid orangered;
+  	border-bottom: 4px solid orangered;
 }
+
+/* ===================================================================== DATE */
+
+#date-daytime {
+    z-index: 1;
+    position: absolute;
+    top: calc(50% - 4.5em);
+    left: calc(50% - 200px);
+    width: 400px;
+    height: 8.5em;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: 200;
+}
+
+#date-time {
+    color: #FFFFFF;
+    font-size: 7em;
+    text-shadow: 0 1px 0px #EEE, 0 2px 0px #DDD, 0 3px 0px #CCC, 0 4px 0px #BBB, 0 5px 0px #AAA;
+}
+
+#date-day {
+    color: #FFFFFF;
+    opacity: 0.8;
+    font-size: 1.5em;
+}
+
+#time-hours {}
+
+#time-minutes {}
 
 /* ==================================================================== TODOS */
 
+#new-todo {
+    z-index: 2;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#new-todo input {
+    position: absolute;
+    top: calc(50% - 1.25em);
+    left: calc(50% - 150px);
+    width: 300px;
+    height: 2.5em;
+    padding: 0 1.2em;
+    text-align: center;
+    color: #555555;
+    font-size: 1.2em;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 0 8px #333;
+}
+
 #todos {
-  position: absolute;
-  bottom: 30px;
-  left: 30px;
-	width: 400px;
+    z-index: 1;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+  	width: 400px;
 }
 
 #now,
 #next {
-	color: #CCC;
+  	color: #CCC;
 }
 
 #todos ul {
-	padding: 1px 0;
+  	padding: 1px 0;
 }
 
 .zero {}

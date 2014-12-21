@@ -6,13 +6,21 @@
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:200,300' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
     <div id="background-weaving"></div>
     <h1>ToDo zero</h1>
 
-    <h2>Aujourd'hui</h2>
+    <div id="date-daytime">
+        <p id="date-time"><span id="time-hours">21</span>:<span id="time-minutes">26</span></p>
+        <p id="date-day"><span id="day-day">20</span>/<span id="day-month">12</span>/<span id="day-year">2014</span></p>
+    </div>
+
+    <div id="new-todo" class="hidden">
+      <input type="text" placeholder="nouveau ToDo" />
+    </div>
 
     <div id="todos">
         <ul id="main-menu">

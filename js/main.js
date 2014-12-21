@@ -2,6 +2,10 @@ $(document).ready(function() {
     initTabLinks();
 
     closeAllOtherTabs('now');
+
+    updateDateTime();
+
+    setInterval(updateDateTime, 60000);
 });
 
 /**
@@ -94,3 +98,19 @@ function refreshTodosLeft() {
     $('#todos-left').html(todosLeft);
 }
 
+function updateDateTime() {
+    var dateTime = new Date();
+    var year, month, day, hours, minutes;
+
+    year = dateTime.getFullYear();
+    month = dateTime.getMonth();
+    day = dateTime.getDate();
+    hours = dateTime.getHours();
+    minutes = dateTime.getMinutes();
+
+    $('#day-day').html(day);
+    $('#day-month').html(month);
+    $('#day-year').html(year);
+    $('#time-hours').html(hours);
+    $('#time-minutes').html(minutes);
+}
