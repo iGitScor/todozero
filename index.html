@@ -22,26 +22,28 @@
       <input type="text" placeholder="nouveau ToDo" />
     </div>
 
-    <div id="todos">
-        <ul id="main-menu">
-            <li><a href="#" class="btn tab-link tab-active" data-tabname="now">Aujourd'hui</a></li>
-            <li><a href="#" class="btn tab-link" data-tabname="next">Plus tard</a></li>
-        </ul>
+    <ul id="main-menu">
+        <li id="tab-now" class="tab-wrapper"><a href="#" class="tab-link tab-active" data-tabname="now">{</a></li>
+        <li id="tab-later" class="tab-wrapper"><a href="#" class="tab-link" data-tabname="later">}</a></li>
+    </ul>
 
+    <div id="todos">
         <div id="now" class="tab">
+            <h2>Aujourd'hui</h2>
             <ul>
-                <li class="btn todo zero">Ut varius tincidunt libero.</li>
-                <li class="btn todo zero">Etiam rhoncus.</li>
-                <li class="btn todo zero">Fusce ac felis sit amet ligula pharetra condimentum.</li>
+                <li class="todo zero">Ut varius tincidunt libero.</li>
+                <li class="todo zero">Etiam rhoncus.</li>
+                <li class="todo zero">Fusce ac felis sit amet ligula pharetra condimentum.</li>
             </ul>
         </div>
 
-        <div id="next" class="tab">
+        <div id="later" class="tab">
+            <h2>Plus tard</h2>
             <ul>
-                <li class="btn todo zero">Pellentesque commodo eros a enim.</li>
-                <li class="btn todo zero">Maecenas malesuada.</li>
-                <li class="btn todo zero">Suspendisse eu ligula. Nam at tortor in tellus interdum sagittis.</li>
-                <li class="btn todo zero">Etiam imperdiet imperdiet orci. In auctor lobortis lacus. Pellentesque commodo eros a enim.</li>
+                <li class="todo zero">Pellentesque commodo eros a enim.</li>
+                <li class="todo zero">Maecenas malesuada.</li>
+                <li class="todo zero">Suspendisse eu ligula. Nam at tortor in tellus interdum sagittis.</li>
+                <li class="todo zero">Etiam imperdiet imperdiet orci. In auctor lobortis lacus. Pellentesque commodo eros a enim.</li>
             </ul>
         </div>
     </div>

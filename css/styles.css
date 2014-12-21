@@ -1,14 +1,14 @@
 /* =========================================================== GENERAL STYLES */
 
 html {
-  	height: 100%;
-  	background: #E4E4E4 url('../img/default background.jpg') no-repeat center center fixed;
-  	background-size: cover;
+    height: 100%;
+    background: #E4E4E4 url('../img/default background.jpg') no-repeat center center fixed;
+    background-size: cover;
 }
 
 body {
     position: relative;
-  	height: 100%;
+    height: 100%;
 }
 
 div, input {
@@ -16,26 +16,28 @@ div, input {
 }
 
 a {
-  	text-decoration: none;
+    text-decoration: none;
 }
 
 h1 {
-  	position: absolute;
-  	top: 5px;
-  	left: 5px;
-  	color: #777;
-  	font-family: monospace, arial;
-  	font-size: 0.8em;
+    position: absolute;
+    top: calc(50% - 4em);
+    left: calc(50% - 15%);
+    width: 30%;
+    height: 1.5em;
+    color: #FFF;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: 200;
+    font-size: 1.5em;
 }
 
 h2 {
-    position: absolute;
-    top: 30px;
-    left: 30px;
-    color: #FFFFFF;
+    height: 1.5em;
+    line-height: 1.5em;
     font-family: monospace, arial;
-    font-size: 4.5em;
-    font-weight: bold;
+    font-size: 1.3em;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 ul {}
@@ -54,50 +56,49 @@ li {}
     transition: opacity 1s linear, visibility 1s linear;
 }
 
-/* ================================================================== BUTTONS */
-
-.btn {
-  	margin: 5px 0;
-  	padding: 0 1em;
-  	line-height: 40px;
-  	color: #CCC;
-  	background-color: #393939;
-  	border-radius: 2px;
-  	box-sizing: border-box;
-}
-
-.btn:hover {
-  	background-color: #444;
-}
-
-.btn:active {
-  	background-color: #555;
-}
-
 /* ================================================================ MAIN MENU */
 
 #main-menu {
-  	margin-top: 10px;
+    z-index: 2;
+    position: absolute;
+    top: calc(50% - 25px);
+    width: 100%;
+    height: 50px;
 }
 
-#main-menu li {
-  	display: inline-block;
-}
+/* ====================================================================== TABS */
 
-/* ===================================================================== TABS */
-
-.tab-menu {
-  	line-height: 30px;
-  	height: 30px;
-  	text-align: center;
+.tab-wrapper {
+    display: inline-block;
+    overflow: hidden;
+    height: 50px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px #777777;
 }
 
 .tab-link {
-  	display: inline-block;
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    color: #777777;
+    line-height: 50px;
+    font-size: 30px;
 }
 
 .tab-active {
-  	border-bottom: 4px solid orangered;
+    display: none;
+}
+
+#tab-now {
+    float: left;
+    margin-left: 20px;
+}
+
+#tab-later {
+    float: right;
+    margin-right: 20px;
 }
 
 /* ===================================================================== DATE */
@@ -106,8 +107,8 @@ li {}
     z-index: 1;
     position: absolute;
     top: calc(50% - 4.5em);
-    left: calc(50% - 200px);
-    width: 400px;
+    left: calc(50% - 15%);
+    width: 30%;
     height: 8.5em;
     text-align: center;
     font-family: 'Lato', sans-serif;
@@ -133,7 +134,7 @@ li {}
 /* ==================================================================== TODOS */
 
 #new-todo {
-    z-index: 2;
+    z-index: 3;
     position: relative;
     width: 100%;
     height: 100%;
@@ -160,17 +161,40 @@ li {}
     z-index: 1;
     position: absolute;
     bottom: 30px;
-    left: 30px;
-  	width: 400px;
+    left: 0;
+    width: 100%;
 }
 
-#now,
-#next {
-  	color: #CCC;
+.tab {
+    width: calc(30% - 30px);
+    color: #CCC;
+}
+
+#now {
+    float: left;
+    margin-left: 30px;
+}
+
+#later {
+    float: right;
+    margin-right: 30px;
 }
 
 #todos ul {
-  	padding: 1px 0;
+    padding: 1px 0;
+}
+
+.todo {
+    margin-top: 3px;
+    padding: 10px;
+    color: #333333;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.todo:hover {
+    background-color: #FFFFFF;
 }
 
 .zero {}
