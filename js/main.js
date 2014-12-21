@@ -80,6 +80,16 @@ function initTabLinks() {
     });
 }
 
+function leadingZeros(chainToComplete, nbChar) {
+    var chain = chainToComplete.toString();
+
+    if (chain.length >= nbChar) {
+        return chain;
+    }
+
+    return leadingZeros(String(0).concat(chain), nbChar--);
+}
+
 /**
  * Refresh the "todos left" count
  *
@@ -103,10 +113,10 @@ function updateDateTime() {
     var year, month, day, hours, minutes;
 
     year = dateTime.getFullYear();
-    month = dateTime.getMonth();
-    day = dateTime.getDate();
-    hours = dateTime.getHours();
-    minutes = dateTime.getMinutes();
+    month = leadingZeros(dateTime.getMonth(), 2);
+    day = leadingZeros(dateTime.getDate(), 2);
+    hours = leadingZeros(dateTime.getHours(), 2);
+    minutes = leadingZeros(dateTime.getMinutes(), 2);
 
     $('#day-day').html(day);
     $('#day-month').html(month);
