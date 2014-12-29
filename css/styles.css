@@ -303,13 +303,15 @@ li {}
 }
 
 #now {
-    float: left;
-    margin-left: 30px;
+    position: absolute;
+    left: 30px;
+    bottom: 0;
 }
 
 #later {
-    float: right;
-    margin-right: 30px;
+    position: absolute;
+    right: 30px;
+    bottom: 0;
 }
 
 #todos ul {
