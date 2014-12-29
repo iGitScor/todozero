@@ -74,12 +74,22 @@ function initTabLink(tabLink) {
     });
 }
 
+/**
+ * [initTabLinks description]
+ * @return {[type]} [description]
+ */
 function initTabLinks() {
     $('.tab-link').each(function() {
         initTabLink($(this));
     });
 }
 
+/**
+ * [leadingZeros description]
+ * @param  {[type]} chainToComplete [description]
+ * @param  {[type]} nbChar          [description]
+ * @return {[type]}                 [description]
+ */
 function leadingZeros(chainToComplete, nbChar) {
     var chain = chainToComplete.toString();
 
@@ -108,6 +118,10 @@ function refreshTodosLeft() {
     $('#todos-left').html(todosLeft);
 }
 
+/**
+ * [updateDateTime description]
+ * @return {[type]} [description]
+ */
 function updateDateTime() {
     var dateTime = new Date();
     var year, month, day, hours, minutes;
