@@ -144,15 +144,50 @@ li {}
     content: "\ea40";
 }
 
-/* ================================================================ MAIN MENU */
+/* =================================================================== LAYOUT */
+
+#background-scanlines {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#date-daytime {
+    z-index: 2;
+    position: absolute;
+    top: calc(50% - 4.5em);
+    left: calc(50% - 15%);
+    width: 30%;
+    height: 8.5em;
+}
+
+#new-todo {
+    z-index: 4;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
 
 #main-menu {
-    z-index: 2;
+    z-index: 3;
     position: absolute;
     top: calc(50% - 25px);
     width: 100%;
     height: 50px;
 }
+
+#todos {
+    z-index: 1;
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 60px);
+}
+
+/* ================================================================ MAIN MENU */
+
+#main-menu {}
 
 /* ===================================================================== TABS */
 
@@ -234,12 +269,6 @@ li {}
 /* ===================================================================== DATE */
 
 #date-daytime {
-    z-index: 1;
-    position: absolute;
-    top: calc(50% - 4.5em);
-    left: calc(50% - 15%);
-    width: 30%;
-    height: 8.5em;
     text-align: center;
     font-family: 'Lato', sans-serif;
     font-weight: 200;
@@ -264,10 +293,6 @@ li {}
 /* ==================================================================== TODOS */
 
 #new-todo {
-    z-index: 3;
-    position: relative;
-    width: 100%;
-    height: 100%;
     background-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -288,12 +313,6 @@ li {}
 }
 
 #todos {
-    z-index: 1;
-    position: absolute;
-    bottom: 30px;
-    left: 0;
-    width: 100%;
-    height: calc(100% - 60px);
     overflow: hidden;
 }
 
@@ -332,3 +351,16 @@ li {}
 }
 
 .zero {}
+
+/* ===================================================================== MISC */
+
+#background-scanlines {/*
+    opacity: 0.2;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAGElEQVQYV2NkIAAYgfL/8akBKcALhoQJAAPKBAViYPz+AAAAAElFTkSuQmCC), -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.65) 100%);
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAGElEQVQYV2NkIAAYgfL/8akBKcALhoQJAAPKBAViYPz+AAAAAElFTkSuQmCC), -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(0,0,0,0)), color-stop(50%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65)));
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAGElEQVQYV2NkIAAYgfL/8akBKcALhoQJAAPKBAViYPz+AAAAAElFTkSuQmCC), -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,0.65) 100%);
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAGElEQVQYV2NkIAAYgfL/8akBKcALhoQJAAPKBAViYPz+AAAAAElFTkSuQmCC), -o-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,0.65) 100%);
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAGElEQVQYV2NkIAAYgfL/8akBKcALhoQJAAPKBAViYPz+AAAAAElFTkSuQmCC), -ms-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,0.65) 100%);
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAGElEQVQYV2NkIAAYgfL/8akBKcALhoQJAAPKBAViYPz+AAAAAElFTkSuQmCC), radial-gradient(ellipse at center, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,0.65) 100%);
+    background-repeat: repeat;
+*/}
