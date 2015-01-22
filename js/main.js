@@ -1,11 +1,11 @@
-$(document).ready(function() {
+$(document).ready(function () {
     initTabLinks();
 
     closeAllOtherTabs('now');
 
     updateDateTime();
 
-    setInterval(updateDateTime, 60000);
+    setInterval(updateDateTime, 30000);
 });
 
 /**
@@ -61,10 +61,10 @@ function closeAllOtherTabs(tabName) {
  * @return {[type]}         [description]
  */
 function initTabLink(tabLink) {
-    tabLink.click(function(event) {
+    tabLink.click(function (event) {
         event.preventDefault();
 
-        $('.tab-link').each(function() {
+        $('.tab-link').each(function () {
             $(this).removeClass('tab-active');
         });
 
@@ -79,26 +79,11 @@ function initTabLink(tabLink) {
  * @return {[type]} [description]
  */
 function initTabLinks() {
-    $('.tab-link').each(function() {
+    $('.tab-link').each(function () {
         initTabLink($(this));
     });
 }
 
-/**
- * [leadingZeros description]
- * @param  {[type]} chainToComplete [description]
- * @param  {[type]} nbChar          [description]
- * @return {[type]}                 [description]
- */
-function leadingZeros(chainToComplete, nbChar) {
-    var chain = chainToComplete.toString();
-
-    if (chain.length >= nbChar) {
-        return chain;
-    }
-
-    return leadingZeros(String(0).concat(chain), nbChar--);
-}
 
 /**
  * Refresh the "todos left" count
@@ -109,7 +94,7 @@ function refreshTodosLeft() {
     var activeTab = getActiveTab();
     var todosLeft;
 
-    if (typeof activeTab === 'undefined') {
+    if (activeTab === undefined) {
         return false;
     }
 
@@ -123,18 +108,9 @@ function refreshTodosLeft() {
  * @return {[type]} [description]
  */
 function updateDateTime() {
-    var dateTime = new Date();
-    var year, month, day, hours, minutes;
-
-    year = dateTime.getFullYear();
-    month = leadingZeros(dateTime.getMonth(), 2);
-    day = leadingZeros(dateTime.getDate(), 2);
-    hours = leadingZeros(dateTime.getHours(), 2);
-    minutes = leadingZeros(dateTime.getMinutes(), 2);
-
-    $('#day-day').html(day);
-    $('#day-month').html(month);
-    $('#day-year').html(year);
-    $('#time-hours').html(hours);
-    $('#time-minutes').html(minutes);
+    $('#day-day').html(moment().format('DD'));
+    $('#day-month').html(moment().format('MM'));
+    $('#day-year').html(moment().format('YYYY'));
+    $('#time-hours').html(moment().format('HH'));
+    $('#time-minutes').html(moment().format('mm'));
 }
