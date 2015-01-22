@@ -272,6 +272,12 @@ li {}
     text-align: center;
     font-family: 'Lato', sans-serif;
     font-weight: 200;
+    cursor: default;
+}
+
+#date-daytime p::selection,
+#date-daytime span::selection {
+    background-color: transparent;
 }
 
 #date-time {
