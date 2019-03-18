@@ -1,7 +1,7 @@
 ToDo Zero
 =========
 
-I'ts just a minimalistic "To-Do" web app,
+It's just a minimalistic "To-Do" web app,
 
 Changelog
 ---------
